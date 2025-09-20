@@ -1,6 +1,6 @@
 {
   "name": "temp-file-share-mcp",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "MCP server exposing temporary file uploads backed by tfLink.",
   "license": "ISC",
   "main": "dist/index.js",
