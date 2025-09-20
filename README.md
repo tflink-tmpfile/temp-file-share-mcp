@@ -74,6 +74,9 @@ Learn more about the project and release updates at [tmpfile.link/temp-file-shar
 ## npm Package
 Install from npm: [temp-file-share-mcp](https://www.npmjs.com/package/temp-file-share-mcp).
 
+## GitHub Repository
+Browse the code and report issues at [github.com/tflink-tmpfile/temp-file-share-mcp](https://github.com/tflink-tmpfile/temp-file-share-mcp).
+
 ## Testing Notes
 Critical paths (configuration, tfLink client, and tool wiring) are unit-tested with Jest. Live tfLink integration is intentionally out of scope to avoid leaking credentials; add such checks behind a guarded `LIVE_TFLINK_TEST=1` when required.
 
