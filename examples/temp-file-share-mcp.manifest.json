@@ -1,0 +1,34 @@
+{
+  "name": "temp-file-share-mcp",
+  "description": "Model Context Protocol server exposing temporary file uploads backed by tfLink.",
+  "homepage_url": "https://tmpfile.link",
+  "capabilities": {
+    "tools": {
+      "upload_file_to_get_temp_share_link": {
+        "description": "Upload a readable local file to tmpfile.link and receive a temporary download URL.",
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "filePath": {
+              "type": "string",
+              "description": "Absolute or relative path to the file to upload (must be readable by the MCP server process)."
+            }
+          },
+          "required": ["filePath"],
+          "additionalProperties": false
+        }
+      }
+    }
+  },
+  "server": {
+    "transport": "stdio",
+    "name": "temp-file-share-mcp",
+    "description": "Upload a local file to tmpfile.link and return a temporary download URL.",
+    "command": "npx",
+    "args": ["-y", "temp-file-share-mcp@latest"],
+    "env": {
+      "TFLINK_USER_ID": "",
+      "TFLINK_AUTH_TOKEN": ""
+    }
+  }
+}
